@@ -20,4 +20,3 @@ void addnode () {
     cin >> newnode->name;
 }
 
-,
