@@ -19,3 +19,5 @@ void addnode () {
     cout << "\nEnter the name of the student = ";
     cin >> newnode->name;
 }
+
+,
