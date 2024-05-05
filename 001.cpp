@@ -12,7 +12,7 @@ struct node
 
 node* START = NULL ;
 
-void addnode () {
+void addnode() {
     node* newnode = new node() ; 
     cout << "\n Enter the roll number of student =";
     cin >> newnode -> nim ;
@@ -187,5 +187,54 @@ void addnode () {
             cout << "\nRoll number =" <<curr->nim << endl;
             cout << "\nname =" << curr->name << endl;
         }
+    }
 
+    int main()
+    {
+        while (true)
+        {
+            try
+            {
+                cout << "\nMenu" << endl;
+                cout << "1. add a record to the list" << endl;
+                cout << "2. delete a record from the list" << endl;
+                cout << "3  view all records in the ascending oreder of roll numbers" << endl;
+                cout << "4. view all records in the descending order of roll numbers" << endl;
+                cout << "5. search for a record in the list" << endl;
+                cout << "6. exit"<< endl;
+                cout << "\nEnter your choice 1-6 =";
+                char ch;
+                cin >> ch;
+            
+                switch (ch)
+                {
+                    case '1':
+                        addnode();
+                        break;
+                    case '2':
+                        deletenode();
+                        break;
+                    case '3':
+                        traverse();
+                        break;
+                    case '4':
+                        retraverse();
+                        break;
+                    case '5':
+                        searchdata();
+                        break;
+                    case '6':
+                        return 0;
+                    default:
+                        cout << "\nInvalid option" << endl;
+                        break;
+                    
+                }
+            }
+            catch (exceptio &e)
+            {
+                cout << "check for the values entered." << endl;
+            }
+            
+        }
     }
