@@ -163,7 +163,7 @@ void addnode () {
                 while (currentnode != NULL)
                 {
                     cout << currentnode->nim << " " << currentnode->name << endl;
-                    currentnode = currentnode->prev
+                    currentnode = currentnode->prev;
                 }
         }
     }
