@@ -82,7 +82,7 @@ void addnode () {
     }
     void deletenode()
     {
-        
+        node *previous
     }
    
 
