@@ -34,12 +34,13 @@ void addnode () {
 
     else
     {
-        node *current = START
-        node *previous = NULL
+        node *current = START;
+        node *previous = NULL;
 
         while (current != NULL && current->mhs < newnode->nim)
         {
-            
+            previous = current;
+            current = current->next;
         }
         
         
