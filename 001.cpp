@@ -32,8 +32,17 @@ void addnode () {
         START = newnode;
 }
 
-    else{
+    else
+    {
+        node *current = START
+        node *previous = NULL
 
+        while (current != NULL && current->mhs < newnode->nim)
+        {
+            /* code */
+        }
+        
+        
     }
 
 
