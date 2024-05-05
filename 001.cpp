@@ -68,5 +68,21 @@ void addnode () {
 
 }
 
+    bool search (int rollNo, node **previous, node **current)
+    {
+        *previous = NULL;
+        *current = START;
+         while (*current != NULL && (*current)->nim != rollNo)
+         {
+            *previous = *current;
+            *current = (*current)->next;
+
+         }
+         return (*current != NULL);
+    }
+    void deletenode()
+    {
+        
+    }
    
 
