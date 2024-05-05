@@ -86,7 +86,7 @@ void addnode() {
         int rollNo;
 
         cout << "\nEnter the roll number of the student whose record is to be deleted =";
-        cin >> rollNo
+        cin >> rollNo;
         if (START == NULL)
         {
             cout << "list is empty" << endl;
@@ -125,7 +125,7 @@ void addnode() {
         }
 
             delete current;
-            cout << "\x1b[32mRecord with roll number" << rollNo << "deleted\x1b[0m"<< endl
+            cout << "\x1b[32mRecord with roll number" << rollNo << "deleted\x1b[0m"<< endl;
     }
 
     bool listempty ()
