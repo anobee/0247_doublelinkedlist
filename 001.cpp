@@ -130,7 +130,7 @@ void addnode() {
 
     bool listempty ()
         {
-            return (START=NULL);
+            return (START == NULL);
         }
    
 
@@ -140,11 +140,11 @@ void addnode() {
         cout << "\nList is empty" << endl;
         else
         {
-            cout << "\nRecors in ascending order of roll number are =" << endl;
+            cout << "\nRecors in ascending order of roll number are :" << endl;
             node *currentnode = START;
             while (currentnode != NULL)
             {
-                cout << currentnode->nim << " " << currentnode << endl;
+                cout << currentnode->nim << " " << currentnode->name << endl;
                 currentnode = currentnode->next;
             }
         }
@@ -156,7 +156,7 @@ void addnode() {
         cout << "\nList is Empty" << endl;
         else
         {
-            cout << "\nRecord in descending order of roll number are =" << endl;
+            cout << "\nRecord in descending order of roll number are :" << endl;
             node *currentnode = START;
             while (currentnode->next != NULL)
                 currentnode = currentnode->next;
