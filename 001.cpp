@@ -167,3 +167,25 @@ void addnode () {
                 }
         }
     }
+
+    void searchdata()
+    {
+        if (listempty()== true)
+        {
+            cout << "\nlist is empty" << endl;
+        }
+        node *prev, *curr;
+        prev = curr = NULL;
+        cout << "\nEnter the roll number of the student whose record you want to search =";
+        int num;
+        cin >> num;
+        if (search (num, &prev, &curr)== false)
+            cout << "\nrecord not found" << endl;
+        else
+        {
+            cout << "\nRecord found" << endl;
+            cout << "\nRoll number =" <<curr->nim << endl;
+            cout << "\nname =" << curr->name << endl;
+        }
+
+    }
