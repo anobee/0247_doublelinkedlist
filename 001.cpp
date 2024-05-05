@@ -92,7 +92,17 @@ void addnode () {
             cout << "list is empty" << endl;
             return;
         }
-        
+        current = START;
+        previous =NULL;
+
+        while (current != NULL && current->nim != rollNo)
+        {
+            previous = current;
+            current = current->next;
+        }
+
+        if 
+
     }
    
 
