@@ -39,7 +39,7 @@ void addnode () {
 
         while (current != NULL && current->mhs < newnode->nim)
         {
-            /* code */
+            
         }
         
         
