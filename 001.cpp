@@ -46,7 +46,17 @@ void addnode () {
         newnode->next = current;
         newnode->prev = previous;
         
-        if (cu)
+        if (current != NULL)
+
+        {
+            current->prev =newnode;
+        }
+
+        if (previous != NULL)
+        {
+            previous->next = newnode;
+        }
+        else
         
     }
 
