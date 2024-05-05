@@ -20,19 +20,22 @@ void addnode () {
     cin >> newnode->name;
 
         if (START == NULL || newnode->nim <= START->nim)
-        {
-            cout << "\033[31mDulplicate roll numbers not allowed \033]0m" << endl;
-            return;
-        }
-        newnode->next = START;
-        if (START != NUll) {
-            START->prev = newnode;
-        }
-        newnode->prev = NULL;
-        START = newnode;
-}
 
-    else
+        {
+
+            if (START != NULL && newnode->nim == START->nim)
+            {
+                cout << "\033[31mDulplicate roll numbers not allowed \033]0m" << endl;
+                return;
+            }
+            newnode->next = START;
+            if (START != NUll) {
+                START->prev = newnode;
+            }
+            newnode->prev = NULL;
+            START = newnode;
+        }
+         else
     {
         node *current = START;
         node *previous = NULL;
@@ -57,7 +60,13 @@ void addnode () {
             previous->next = newnode;
         }
         else
+        {
+            START = newnode;
+        }
         
     }
 
+}
+
+   
 
