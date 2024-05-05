@@ -128,9 +128,42 @@ void addnode () {
             cout << "\x1b[32mRecord with roll number" << rollNo << "deleted\x1b[0m"<< endl
     }
 
-        bool listempty ()
+    bool listempty ()
         {
             return (START=NULL);
         }
    
 
+    void traverse()
+    {
+        if (listempty())
+        cout << "\nList is empty" << endl;
+        else
+        {
+            cout << "\nRecors in ascending order of roll number are =" << endl;
+            node *currentnode = START;
+            while (currentnode != NULL)
+            {
+                cout << currentnode->nim << " " << currentnode << endl;
+                currentnode = currentnode->next;
+            }
+        }
+    }
+
+    void retraverse()
+    {
+        if (listempty())
+        cout << "\nList is Empty" << endl;
+        else
+        {
+            cout << "\nRecord in descending order of roll number are =" << endl;
+            node *currentnode = START;
+            while (currentnode->next != NULL)
+                currentnode = currentnode->next;
+                while (currentnode != NULL)
+                {
+                    cout << currentnode->nim << " " << currentnode->name << endl;
+                    currentnode = currentnode->prev
+                }
+        }
+    }
