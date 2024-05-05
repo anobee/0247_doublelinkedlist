@@ -43,6 +43,10 @@ void addnode () {
             current = current->next;
         }
         
+        newnode->next = current;
+        newnode->prev = previous;
+        
+        if (cu)
         
     }
 
