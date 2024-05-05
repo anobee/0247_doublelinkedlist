@@ -25,11 +25,11 @@ void addnode() {
 
             if (START != NULL && newnode->nim == START->nim)
             {
-                cout << "\033[31mDulplicate roll numbers not allowed \033]0m" << endl;
+                cout << "\033[31mDulplicate roll numbers not allowed \033[0m" << endl;
                 return;
             }
             newnode->next = START;
-            if (START != NUll) {
+            if (START != NULL) {
                 START->prev = newnode;
             }
             newnode->prev = NULL;
@@ -40,7 +40,7 @@ void addnode() {
         node *current = START;
         node *previous = NULL;
 
-        while (current != NULL && current->mhs < newnode->nim)
+        while (current != NULL && current->nim < newnode->nim)
         {
             previous = current;
             current = current->next;
@@ -87,7 +87,7 @@ void addnode() {
 
         cout << "\nEnter the roll number of the student whose record is to be deleted =";
         cin >> rollNo
-        if (START==NULL)
+        if (START == NULL)
         {
             cout << "list is empty" << endl;
             return;
@@ -103,7 +103,7 @@ void addnode() {
 
         if (current == NULL)
         {
-            cout << "\033[31mThe record with roll number" << rollNo << "not found\033[0m]" << endl;
+            cout << "\033[31mThe record with roll number" << rollNo << "not found\033[0m" << endl;
             return;
         }
 
@@ -231,7 +231,7 @@ void addnode() {
                     
                 }
             }
-            catch (exceptio &e)
+            catch (exception &e)
             {
                 cout << "check for the values entered." << endl;
             }
